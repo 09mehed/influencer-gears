@@ -71,9 +71,11 @@ ul li{
 
 /* market-place-area start */
 .market-place-area{
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
     margin: 0 20px;
 }
 
@@ -138,4 +140,91 @@ ul li{
     font-size: 0.8rem;
     font-weight: 700;
     padding: 5px 0;
+}
+/* feature-area start */
+
+.feature-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+.feature-text h1{
+    color: rgb(10, 8, 38);
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 5px 0;
+}
+.feature-text p{
+    color: rgb(108, 108, 108);
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 15px 0;
+}
+.btn-1{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 400;
+    background-color: rgb(224, 44, 109);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* footer area start */
+
+.footer{
+    background-color: #0A0826;
+    text-align: center;
+    padding: 15px 0;
+}
+.footer h1{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 10px 0;
+}
+.footer p{
+    color: rgb(217, 219, 225);
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 5px 0;
+}
+.footer-icon{
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+}
+.footer-icon i{
+    margin: 10px 10px;
+    font-size: 1rem;
+}
+
+/* mobile responsive layout */
+
+@media screen  and (max-width:426px){
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+    }
+    .banner{
+        flex-direction: column-reverse;
+    }
+    .banner-text, .feature-text{
+        text-align: center;
+    }
+    .market-place-area{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    .popular h1{
+        text-align: center;
+    }
+    .card-box{
+        grid-template-columns: 1fr;
+    }
+    .feature-area{
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
 }
